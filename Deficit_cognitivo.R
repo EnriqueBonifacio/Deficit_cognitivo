@@ -3,6 +3,7 @@ library(tidyverse)
 base_datos = read_xlsx("BASE.xlsx", skip = 1)
 view(base_datos)
 nueva_base %>% str()
+
 #Limpiando la base de datos 
 
 nueva_base <- base_datos %>%
