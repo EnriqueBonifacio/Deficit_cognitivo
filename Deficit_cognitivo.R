@@ -68,6 +68,9 @@ tabla1 <- tabla1_datos %>%
           all_continuous() ~ "{mean} ({sd})",
           all_categorical() ~ "{n} ({p}%)"
           ),
+          digits = list(
+          all_continuous() ~ c(1, 1),
+          all_categorical() ~ c(0, 1),
           label= list(
           edad ~ "Edad",
           sexo ~ "Sexo",
