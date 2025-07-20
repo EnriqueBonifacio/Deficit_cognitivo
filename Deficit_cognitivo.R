@@ -1,5 +1,5 @@
 library(readxl)
-library(rmarkdown
+library(rmarkdown)
 library(tidyverse)
 library(gtsummary)
 base_datos = read_xlsx("BASE.xlsx", skip = 1)
@@ -51,8 +51,18 @@ nueva_base <- nueva_base %>%
               )
               
 ## Tabla 1
+tabla1_datos <- nueva_base %>% 
+                select(edad,
+                       sexo,
+                       estado_marital,
+                       grado_instruccion,
+                       infeccion_covid,
+                       hospitalizado_covid,
+                       enfermedad_cronica,
+                       control_enfermedad
+                       )
 
-tabla1 <- nueva_base %>% 
+tabla1 <- tabla1_datos %>% 
           tbl_summary(
           statistic = list(
           all_continuous() ~ "{mean} ({sd})",
