@@ -52,15 +52,16 @@ nueva_base <- nueva_base %>%
               
 ## Tabla 1
 tabla1_datos <- nueva_base %>% 
-                select(edad,
-                       sexo,
-                       estado_marital,
-                       grado_instruccion,
-                       infeccion_covid,
-                       hospitalizado_covid,
-                       enfermedad_cronica,
-                       control_enfermedad
-                       )
+                select(
+                edad,
+                sexo,
+                estado_marital,
+                grado_instruccion,
+                infeccion_covid,
+                hospitalizado_covid,
+                enfermedad_cronica,
+                control_enfermedad
+                )
 
 tabla1 <- tabla1_datos %>% 
           tbl_summary(
